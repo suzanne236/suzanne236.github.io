@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="style.css" />
+
+	<title>FindMyFlight</title>
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html"><img src="img/airplane.png" style="width: 35px; height: 35px; float: left; margin-top: 5px;">
+		<span style="float: left; margin-top: 10px; font-size: 20px; font-weight: bold; color: #fff; margin-left: 10px;">FindMyFlight</span></a>
+		
+		<button class="button" onclick="document.location='index.html'">Home</button>
+		<button class="button" onclick="document.location='login.html'">Login</button>
+		<button class="button" onclick="document.location='signup.html'">Sign Up</button>
+		<button class="button" onclick="document.location='about.html'">About</button>
+		<button class="button" onclick="document.location='contact.html'">Contact</button>
+	</div>
+
+	<div class="booking-form-signup">
+		<form class="loginform" onsubmit="return signupvalidate();" action="index.html" method="post">
+			<h2 class="signupheader">Sign Up</h2>
+
+			<div class="form-group">
+				<span class="form-label">Firstname</span>
+				<input class="form-control" type="text" id="firstname" placeholder="Enter Firstname" oninput="checkbox2()"/>
+				<span id="fname" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<span class="form-label">Lastname</span>
+				<input class="form-control" type="text" id="lastname" placeholder="Enter Lastname" oninput="checkbox2()"/>
+				<span id="lname" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<span class="form-label">Email Id</span>
+				<input class="form-control" type="text" id="emailid" placeholder="Enter Email Id" oninput="checkbox2()"/>
+				<span id="eid" class="text-danger"></span>
+			</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<span class="form-label">Gender</span><br>
+							<input type="radio" id="male" name="gender" value="male" oninput="checkbox2()">
+							<label for="male">Male</label>
+							<input type="radio" id="female" name="gender" value="female" oninput="checkbox2()">
+							<label for="female">Female</label><br>
+						</div>
+						<span id="radio" class="text-danger"></span>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="form-group">
+							<span class="form-label">Age</span>
+							<input class="form-control" type="number" id="age" placeholder="Age" oninput="checkbox2()"/>
+							<span id="agee" class="text-danger"></span>
+						</div>
+					</div>
+				</div>
+
+			<div class="form-group">
+				<span class="form-label">Password</span>
+				<input class="form-control" type="password" id="password" placeholder="Password" oninput="checkbox2()"/>
+				<span id="pass" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<span class="form-label">Confirm Password</span>
+				<input class="form-control" type="password" id="cpassword" placeholder="Re-Enter password" oninput="checkbox2()"/>
+				<span id="cpass" class="text-danger"></span>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<button type="submit" class="submit-btn">Sign Up</button>
+				</div>
+
+				<div class="col-sm-6">
+					<div style="margin-top: 10px; opacity: 0.7">Already a User?<a href="login.html" style="margin-left: 10px;">Login</a></div>
+				</div>
+			</div>
+
+		</form>
+    </div>
+    <br><br><br><br><br>
+
+	<div class="footer">
+	   <h5>Copyright &copy; Site by Jugal Senjaliya,Suzanne Samuel, Smit Patel, Pranavsinh Thakor</h6>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

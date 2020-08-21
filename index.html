@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="style.css" />
+
+	<title>FindMyFlight</title>
+</head>
+<body>
+	<div class="navbar">
+		<a href="index.html"><img src="img/airplane.png" style="width: 35px; height: 35px; float: left; margin-top: 5px;">
+		<span style="float: left; margin-top: 10px; font-size: 20px; font-weight: bold; color: #fff; margin-left: 10px;">FindMyFlight</span></a>
+		
+		<button class="button" onclick="document.location='index.html'">Home</button>
+		<button class="button" onclick="document.location='login.html'">Login</button>
+		<button class="button" onclick="document.location='signup.html'">Sign Up</button>
+		<button class="button" onclick="document.location='about.html'">About</button>
+		<button class="button" onclick="document.location='contact.html'">Contact</button>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="booking-form">
+				<form name="index" class="indexform" action="searchflight.html" onsubmit="return indexvalidate();">
+					<div class="form-group">
+						<div style="margin-bottom: 20px; margin-top: 0px;">
+							<h2>
+								Search Flight
+							</h2>
+						</div>
+						<span class="form-label">Source</span>
+						<select name="source" class="form-control" id="sou" oninput="checkbox1()">
+							<option value="none" selected disabled hidden>Select Source</option>
+							<option>Delhi (DEL)</option>
+							<option>Mumbai (BOM)</option>
+							<option>Bengaluru (BLR)</option>
+							<option>Kollata (CCU)</option>
+							<option>Ahmedabad (AMD)</option>
+						</select>
+						<span id="source" class="text-danger"></span>
+					</div>
+					<div class="form-group">
+						<span class="form-label">Destination</span>
+						<select name="destination" class="form-control" id="des" oninput="checkbox1()">
+							<option value="none" selected disabled hidden>Select Destination</option>
+							<option>Delhi (DEL)</option>
+							<option>Mumbai (BOM)</option>
+							<option>Bengaluru (BLR)</option>
+							<option>Kollata (CCU)</option>
+							<option>Ahmedabad (AMD)</option>
+						</select>
+						<span id="destination" class="text-danger"></span>
+					</div>
+
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<span class="form-label">Date</span>
+								<input id="datee" class="form-control" type="date" oninput="checkbox1()">
+								<span id="dd" class="text-danger"></span>
+							</div>
+						</div>
+					</div>
+					<div class="form-btn">
+						<button class="submit-btn">Search Flight</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="col-md-6" id="col2">
+			<div class="col21">MAKE YOUR RESERVATION</div>
+			<div class="col22">Online travel booking brand providing range of choice for flights for travelers. Our core value differentiator is the most trusted user experience, be it in terms of quickest search and booking, fastest payments, settlement or refund processes.</div>
+		</div>
+	</div>
+
+	<div class="footer">
+	   <h5>Copyright &copy; Site by Jugal Senjaliya,Suzanne Samuel, Smit Patel, Pranavsinh Thakor</h6>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
