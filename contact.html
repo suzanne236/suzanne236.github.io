@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
 	<link type="text/css" rel="stylesheet" href="style.css" />
 
 	<title>FindMyFlight</title>
 </head>
 <body>
-	<div class="navbar">
-		<a href="index.html"><img src="img/airplane.png" style="width: 35px; height: 35px; float: left; margin-top: 5px;">
-		<span style="float: left; margin-top: 10px; font-size: 20px; font-weight: bold; color: #fff; margin-left: 10px;">FindMyFlight</span></a>
-		
-		<button class="button" onclick="document.location='index.html'">Home</button>
-		<button class="button" onclick="document.location='login.html'">Login</button>
-		<button class="button" onclick="document.location='signup.html'">Sign Up</button>
-		<button class="button" onclick="document.location='about.html'">About</button>
-		<button class="button" onclick="document.location='contact.html'">Contact</button>
-	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+				</button>
+				<a href="index.html"><img src="img/airplane.png" style="width: 35px; height: 35px; float: left; margin-top: 5px;">
+				<span style="float: left; margin-top: 10px; font-size: 20px; font-weight: bold; color: #fff; margin-left: 10px;">FindMyFlight</span></a>		
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar" style="float: right;">
+				<ul class="nav navbar-nav">
+					<li class="nav-item">
+						<button class="button" onclick="document.location='index.html'">Home</button>
+					</li>
+
+					<li class="nav-item">
+						<button class="button" onclick="document.location='login.html'">Login</button>
+					</li>
+
+					<li class="nav-item">
+						<button class="button" onclick="document.location='signup.html'">Sign Up</button>
+					</li>
+
+					<li class="nav-item">
+						<button class="button" onclick="document.location='about.html'">About</button>
+					</li>
+
+					<li class="nav-item">
+						<button class="button" onclick="document.location='contact.html'">Contact</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class="row">
-		<div class="col-md-4">
-			<div class="booking-form-signup" style="width: 75%">
+		<div class="col-12 col-md-4">
+			<div class="booking-form-signup" id="mediacontact">
 				<form class="loginform" onsubmit="return contactvalidate();" action="index.html">
 					<h2 class="signupheader">Contact Us</h2>
 
@@ -54,7 +83,7 @@
 				</form>
 		    </div>
 		</div>
-		<div class="col-md-8">
+		<div class="col-12 col-md-8" id="contactmap" style="margin-top: 80px;">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.0903312198448!2d73.13103405053883!3d21.06905409170844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be060e07393bc51%3A0xf96e044991e337e9!2sUka%20Tarsadia%20University!5e0!3m2!1sen!2sin!4v1596958513178!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0; margin-left: 30px; -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3); box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3); border-radius: 8px; opacity: 0.7" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 	</div>
@@ -64,6 +93,5 @@
 	</div>
 
 	<script type="text/javascript" src="script.js"></script>
-
 </body>
 </html>
