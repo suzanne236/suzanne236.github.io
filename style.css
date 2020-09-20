@@ -1,3 +1,221 @@
+/* Animation CSS */
+
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.preload{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: #da8d4f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transition: all 1.5s ease-in-out;
+	transition-delay: 0.75s;
+}
+
+.preload-finish{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.cloud1,.cloud2,.cloud3{
+	height: 100px;
+	position: absolute;
+	right: 0;
+	z-index: -1;
+}
+
+.cloud1{
+	top: 25%;
+	transform: translate(100%, -25%);
+	animation: clouds 3s ease infinite;
+}
+
+.cloud2{
+	top: 50%;
+	transform: translate(100%, -50%);
+	animation: clouds 3s ease infinite 1s;
+}
+
+.cloud3{
+	top: 75%;
+	transform: translate(100%, -75%);
+	animation: clouds 3s ease infinite 0.5s;
+}
+
+
+.airplane{
+	height: 200px;
+	animation: airplane 1s ease infinite alternate;
+}
+
+.preload h3{
+	position: absolute;
+	top: 75%;
+	transform: translateY(-75%);
+	color: white;
+	font-size: 40px;
+}
+
+
+@keyframes airplane{
+	from{
+		transform: translateY(0px);
+	}
+	to{
+		transform: translateY(50px);
+	}
+}
+
+
+@keyframes clouds{
+	from{
+		right: 0%;
+	}
+	to{
+		right: 130%;
+	}
+}
+
+
+
+
+
+
+
+
+/* Social Media */
+
+
+
+
+
+
+.wrapper{
+	margin-bottom: 150px;
+	margin-top: 20px;
+	margin-left: 150px;
+}
+
+
+.wrapper .abutton{
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	float: left;
+	overflow: hidden;
+	margin: 0 5px;
+	background: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .abutton:nth-child(1):hover .icon{
+	background: #4267b2;
+}
+
+.wrapper .abutton:nth-child(2):hover .icon{
+	background: #e1306c;
+}
+
+.wrapper .abutton:nth-child(3):hover .icon{
+	background: #333;
+}
+
+.wrapper .abutton:hover .icon i{
+	color: #fff;
+}
+
+
+.wrapper .abutton:hover{
+	width: 200px;
+}
+
+
+.wrapper .abutton .icon{
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 50px;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 60px;
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .abutton .icon i{
+	font-size: 25px;
+	line-height: 60px;
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .abutton span{
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 60px;
+	margin-left: 10px;
+	transition: all 0.3s ease-out;
+}
+
+
+.wrapper .abutton:nth-child(1) span{
+	color: #4267b2;
+}
+
+.wrapper .abutton:nth-child(2) span{
+	color: #e1306c;
+}
+
+.wrapper .abutton:nth-child(3) span{
+	color: #333;
+}
+
+
+
+.wrapper .abutton:hover .icon i{
+	color: #fff;
+}
+
+
+.wrapper .abutton:hover{
+	width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main CSS */
+
+
+
+
+
+
+*{
+	box-sizing: border-box;
+}
+
+
 body{
 	background-image: url('img/img3.jpg');
 	background-repeat: no-repeat;
@@ -7,11 +225,81 @@ body{
 	overflow-x: hidden;
 }
 
-.navbar{
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: black;
+	opacity: 0.6;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+	margin: auto;
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+
+
+.logo{
+	display: flex;
+	color: white;
+	margin-right: 10px;
+}
+
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	margin: 5px;
+	background-color: white;
+	transition: all 0.5s ease;
+}
+
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+
+/* .navbar{
 	text-align: right;
 	background-color: #000000;
 	opacity: 0.5;
-}
+} */
 
 .button{
 	border: none;
@@ -130,8 +418,49 @@ option{
 
 
 
+@media screen and (max-width: 1300px) {
+	.nav-links{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	
+	body{
+		overflow-x: hidden;
+	}
+
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: black;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 30%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+
+	.nav-links li{
+		opacity: 0;
+	}
+
+	.burger{
+		display: block;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
 
 @media screen and (max-width: 992px) {
+
+
 	#col2 {
 	  background-color: white;
 	  color: black;
@@ -167,7 +496,6 @@ option{
 	}
 
 	#mediacontact{
-		/* width: 50%; */
 		margin: auto;
 		margin-top: 100px;
 		margin-bottom: 50px;
@@ -177,9 +505,13 @@ option{
 		width: 20%;
 		/* margin: auto; */
 		display: flex;
-		margin-bottom: 300px;
+		margin-left: 100px;
 	}
-
+	
+	.wrapper{
+		margin-bottom: 300px;
+		margin-left: 100px;
+	}
 }
 
 @media screen and (max-width: 650px) {
@@ -229,6 +561,19 @@ option{
 		margin: auto;
 		margin-top: 100px;
 		margin-bottom: 200px;
+	}
+
+	#contactmap{
+		width: 20%;
+		margin-left: 30px;
+	}
+	
+	.wrapper{
+		margin-bottom: 300px;
+		margin-left: 30px;
+	}
+	.nav-links{
+		width: 50%;
 	}
 }
 
@@ -306,7 +651,15 @@ option{
 }
 
 
+
+
+
+
 /*Sign Up css*/ 
+
+
+
+
 
 
 .loginheader{
