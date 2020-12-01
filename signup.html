@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 	<link type="text/css" rel="stylesheet" href="style.css" />
 
 	<title>FindMyFlight</title>
@@ -63,19 +64,19 @@
 
 			<div class="form-group">
 				<span class="form-label">Firstname</span>
-				<input class="form-control" type="text" id="firstname" placeholder="Enter Firstname" oninput="checkbox2()"/>
+				<input class="form-control" type="text" name="firstname" id="firstname" placeholder="Enter Firstname" oninput="checkbox2()"/>
 				<span id="fname" class="text-danger"></span>
 			</div>
 
 			<div class="form-group">
 				<span class="form-label">Lastname</span>
-				<input class="form-control" type="text" id="lastname" placeholder="Enter Lastname" oninput="checkbox2()"/>
+				<input class="form-control" type="text" name="lastname" id="lastname" placeholder="Enter Lastname" oninput="checkbox2()"/>
 				<span id="lname" class="text-danger"></span>
 			</div>
 
 			<div class="form-group">
 				<span class="form-label">Email Id</span>
-				<input class="form-control" type="text" id="emailid" placeholder="Enter Email Id" oninput="checkbox2()"/>
+				<input class="form-control" type="text" name="emailid" id="emailid" placeholder="Enter Email Id" oninput="checkbox2()"/>
 				<span id="eid" class="text-danger"></span>
 			</div>
 				<div class="row">
@@ -93,7 +94,7 @@
 					<div class="col-sm-6">
 						<div class="form-group">
 							<span class="form-label">Age</span>
-							<input class="form-control" type="number" id="age" placeholder="Age" oninput="checkbox2()"/>
+							<input class="form-control" type="number" name="age" id="age" placeholder="Age" oninput="checkbox2()"/>
 							<span id="agee" class="text-danger"></span>
 						</div>
 					</div>
@@ -101,7 +102,7 @@
 
 			<div class="form-group">
 				<span class="form-label">Password</span>
-				<input class="form-control" type="password" id="password" placeholder="Password" oninput="checkbox2()"/>
+				<input class="form-control" type="password" name="password" id="password" placeholder="Password" oninput="checkbox2()"/>
 				<span id="pass" class="text-danger"></span>
 			</div>
 
@@ -110,6 +111,9 @@
 				<input class="form-control" type="password" id="cpassword" placeholder="Re-Enter password" oninput="checkbox2()"/>
 				<span id="cpass" class="text-danger"></span>
 			</div>
+
+			<div class="g-recaptcha" data-sitekey="6LcdoPQZAAAAAIQHlxWPisg_OO7PXsWGOJ_KKwoW"></div>
+
 
 			<div class="row">
 				<div class="col-sm-6">
